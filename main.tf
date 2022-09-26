@@ -68,10 +68,10 @@ resource "intersight_networkconfig_policy" "network_connectivity" {
   alternate_ipv6dns_server = length(var.dns_servers_v6) > 1 ? var.dns_servers_v6[1] : null
   description              = var.description != "" ? var.description : "${var.name} Network Connectivity Policy."
   dynamic_dns_domain       = var.update_domain
-  enable_dynamic_dns       = var.dynamic_dns
-  enable_ipv4dns_from_dhcp = var.dynamic_dns == true ? true : false
-  enable_ipv6              = var.ipv6_enable
-  enable_ipv6dns_from_dhcp = var.ipv6_enable == true && var.dynamic_dns == true ? true : false
+  enable_dynamic_dns       = var.enable_dynamic_dns
+  enable_ipv4dns_from_dhcp = var.obtain_ipv4_dns_from_dhcp
+  enable_ipv6              = var.enable_ipv6
+  enable_ipv6dns_from_dhcp = var.obtain_ipv6_dns_from_dhcp
   preferred_ipv4dns_server = length(var.dns_servers_v4) > 0 ? var.dns_servers_v4[0] : null
   preferred_ipv6dns_server = length(var.dns_servers_v6) > 0 ? var.dns_servers_v6[0] : null
   name                     = var.name

@@ -21,13 +21,13 @@ variable "dns_servers_v6" {
   type        = list(string)
 }
 
-variable "dynamic_dns" {
+variable "enable_dynamic_dns" {
   default     = false
   description = "Flag to Enable or Disable Dynamic DNS on the Policy.  Meaning obtain DNS Servers from DHCP Service."
   type        = bool
 }
 
-variable "ipv6_enable" {
+variable "enable_ipv6" {
   default     = false
   description = "Flag to Enable or Disable IPv6 on the Policy."
   type        = bool
@@ -37,6 +37,18 @@ variable "name" {
   default     = "dns"
   description = "Name for the Policy."
   type        = string
+}
+
+variable "obtain_ipv4_dns_from_dhcp" {
+  default     = false
+  description = "Flag to Enable or Disable IPv4 Dynamic DNS Servers on the Policy."
+  type        = bool
+}
+
+variable "obtain_ipv6_dns_from_dhcp" {
+  default     = false
+  description = "Flag to Enable or Disable IPv6 Dynamic DNS Servers on the Policy."
+  type        = bool
 }
 
 variable "organization" {
