@@ -21,6 +21,12 @@ variable "dns_servers_v6" {
   type        = list(string)
 }
 
+variable "domain_profiles" {
+  default     = {}
+  description = "Map for Moid based Domain Profile Sources."
+  type        = any
+}
+
 variable "enable_dynamic_dns" {
   default     = false
   description = "Flag to Enable or Disable Dynamic DNS on the Policy.  Meaning obtain DNS Servers from DHCP Service."
@@ -30,6 +36,12 @@ variable "enable_dynamic_dns" {
 variable "enable_ipv6" {
   default     = false
   description = "Flag to Enable or Disable IPv6 on the Policy."
+  type        = bool
+}
+
+variable "moids" {
+  default     = false
+  description = "Flag to Determine if pools and policies should be data sources or if they already defined as a moid."
   type        = bool
 }
 
