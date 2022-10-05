@@ -55,7 +55,7 @@ func TestFull(t *testing.T) {
 	"AlternateIpv4dnsServer": "208.67.222.222",
 	"AlternateIpv6dnsServer": "2620:119:53::53",
 	"DynamicDnsDomain": "example.com",
-	"EnableDynamicDns": false,
+	"EnableDynamicDns": true,
 	"EnableIpv4dnsFromDhcp": false,
 	"EnableIpv6": true,
 	"EnableIpv6dnsFromDhcp": false,
