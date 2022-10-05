@@ -38,6 +38,7 @@ module "main" {
     "2620:119:53::53"
   ]
   enable_dynamic_dns        = true
+  enable_ipv6               = true
   name                      = var.name
   obtain_ipv4_dns_from_dhcp = false
   organization              = "default"
