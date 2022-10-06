@@ -41,6 +41,6 @@ module "main" {
   enable_ipv6               = true
   name                      = var.name
   obtain_ipv4_dns_from_dhcp = false
-  organization              = "default"
+  organization              = "terratest"
   update_domain             = "example.com"
 }
